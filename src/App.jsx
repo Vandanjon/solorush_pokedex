@@ -27,6 +27,7 @@ const pokemonList = [
   {
     name: "mew",
   },
+  { name: "toto" },
 ];
 
 function App() {
@@ -34,11 +35,7 @@ function App() {
 
   return (
     <div className="container">
-      <NavBar
-        pokemonIndex={pokemonIndex}
-        setPokemonIndex={setPokemonIndex}
-        pokemonList={pokemonList}
-      />
+      <NavBar setPokemonIndex={setPokemonIndex} pokemonList={pokemonList} />
 
       <PokemonCard pokemon={pokemonList[pokemonIndex]} />
     </div>
