@@ -1,3 +1,4 @@
+import { useState } from "react";
 import PokemonCard from "./components/PokemonCard";
 
 const pokemonList = [
@@ -12,6 +13,8 @@ const pokemonList = [
 ];
 
 function App() {
+  const [pokemonIndex, setPokemonIndex] = useState(0);
+
   return (
     <div>
       <PokemonCard pokemon={pokemonList[0]} />
