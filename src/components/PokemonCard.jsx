@@ -1,7 +1,5 @@
-function PokemonCard(props) {
-  const pokemon = { name: "toto" };
-
-  console.log(props);
+/* eslint-disable react/prop-types */
+function PokemonCard({ pokemon }) {
   return (
     <figure>
       {pokemon.imgSrc != null ? (
