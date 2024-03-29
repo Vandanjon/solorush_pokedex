@@ -16,13 +16,20 @@ const pokemonList = [
 function App() {
   const [pokemonIndex, setPokemonIndex] = useState(0);
 
+  const previousIndex = () => {
+    setPokemonIndex(pokemonIndex - 1);
+  };
+
+  const nextIndex = () => setPokemonIndex(pokemonIndex + 1);
+
+  console.log(pokemonIndex);
   return (
     <div className="container">
-      <button>Précédent</button>
+      <button onClick={previousIndex}>Précédent</button>
 
       <PokemonCard pokemon={pokemonList[0]} />
 
-      <button>Suivant</button>
+      <button onClick={nextIndex}>Suivant</button>
     </div>
   );
 }
