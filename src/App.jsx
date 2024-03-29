@@ -1,5 +1,6 @@
 import { useState } from "react";
 import PokemonCard from "./components/PokemonCard";
+import "./App.css";
 
 const pokemonList = [
   {
@@ -16,8 +17,12 @@ function App() {
   const [pokemonIndex, setPokemonIndex] = useState(0);
 
   return (
-    <div>
+    <div className="container">
+      <button>Précédent</button>
+
       <PokemonCard pokemon={pokemonList[0]} />
+
+      <button>Suivant</button>
     </div>
   );
 }
