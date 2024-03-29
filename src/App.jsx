@@ -37,7 +37,6 @@ function App() {
 
   const nextIndex = () => setPokemonIndex(pokemonIndex + 1);
 
-  console.log(pokemonIndex);
   return (
     <div className="container">
       <div className="button-container">
@@ -48,7 +47,7 @@ function App() {
         )}
       </div>
 
-      <PokemonCard pokemon={pokemonList[0]} />
+      <PokemonCard pokemon={pokemonList[pokemonIndex]} />
     </div>
   );
 }
